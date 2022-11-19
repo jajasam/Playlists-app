@@ -1,11 +1,15 @@
 import './App.css';
 
+import Login from './components/Login'
+
 function App() {
   return (
     <div className="App">
-      <header>header</header>
-      <main>main</main>
-      <footer>footer</footer>
+      <header></header>
+      <main>
+        <Login />
+      </main>
+      <footer></footer>
     </div>
   );
 }
