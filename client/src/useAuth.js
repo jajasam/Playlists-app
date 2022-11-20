@@ -7,21 +7,20 @@ function useAuth(code) {
     const [expiresIn, setExpiresIn] = useState("")
 
     useEffect(() => {
-        axios
-        .post('http://localhost:3001/login', {
-            code
-        })
-        .then(res => {
-            console.log(res.data)
-        })
-        .catch(err => {
+        axios.post("http://localhost:3001/login", {
+            code,
+        }).then(res => {
+            setAccessToken(res.data.accessToken)
+            setRefreshToken(res.data.refreshToken)
+            setExpiresIn(res.data.expiresIn)
+        }).catch(err => {
             window.location = ''
         })
     }, [])
 
     return (
         <div>
-            
+            test
         </div>
     )
 }
