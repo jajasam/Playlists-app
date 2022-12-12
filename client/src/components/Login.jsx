@@ -1,3 +1,4 @@
+import '../styles/Login.scss'
 import querystring from "query-string"
 
 function Login() {
@@ -14,8 +15,12 @@ function Login() {
     });
 
     return (
-        <div>
-            <a href={AUTH_URL}>Log in with Spotify</a>
+        <div className="login">
+            <div>
+                <h1>Be Your Own DJ</h1>
+                <p>Login to Spotify and create mixes with your playlists</p>
+                <a href={AUTH_URL} className="btn">Login to Spotify</a>
+            </div>
         </div>
     )
 }
